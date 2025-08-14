@@ -5,7 +5,7 @@ import { useNavigate } from "react-router";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { api } from "../../services/api.js";
+import { api } from "../../services/api.ts";
 import {
   Column,
   Container,
@@ -18,6 +18,7 @@ import {
   SubText,
 } from "./styles.ts";
 import { EmailOutlined, LockOutlined, Person } from "@mui/icons-material";
+import type { IFormData } from "../login/types.ts";
 
 const schema = yup
   .object({
@@ -51,7 +52,7 @@ const SignUp = () => {
 
   console.log(isValid, errors);
 
-  const onSubmit = async (formData) => {
+  const onSubmit = async (formData: IFormData) => {
     try {
       const { data } = await api.get(
         `users?name=${formData.name}&email=${formData.email}&senha=${formData.password}`
@@ -68,7 +69,7 @@ const SignUp = () => {
 
   return (
     <>
-      <Header />
+      <Header autenticado={false} />
       <Container>
         <Column>
           <Title>
