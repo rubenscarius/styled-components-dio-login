@@ -56,24 +56,24 @@ export const SubtitleLogin = styled.p`
   line-height: 25px;
 `;
 
-export const EsqueciText = styled.p`
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 19px;
-  color: #e5e044;
-`;
-
 export const CriarText = styled.p`
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 19px;
-  color: #e23dd7;
+  color: #00dd00;
 
   &:hover {
     cursor: pointer;
   }
+`;
+
+export const SubText = styled.span`
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  color: #ffffff;
 `;
