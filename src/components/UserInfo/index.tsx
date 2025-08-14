@@ -1,6 +1,7 @@
-import { Container, NameText, Progress, UserPicture } from "./styles";
+import { Container, NameText, Progress, UserPicture } from "./styles.ts";
+import type { IUserInfo } from "./types.ts";
 
-const UserInfo = ({ nome, image, percentual }) => {
+const UserInfo = ({ nome, image, percentual }: IUserInfo) => {
   return (
     <Container>
       <UserPicture src={image} />

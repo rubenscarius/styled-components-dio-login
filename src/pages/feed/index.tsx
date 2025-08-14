@@ -1,14 +1,14 @@
-import Button from "../../components/Button";
-import Card from "../../components/Card";
-import Header from "../../components/Header";
-import UserInfo from "../../components/UserInfo";
+import Button from "../../components/Button/index.tsx";
+import Card from "../../components/Card/index.tsx";
+import Header from "../../components/Header/index.tsx";
+import UserInfo from "../../components/UserInfo/index.tsx";
 import {
   Container,
   TextContent,
   Title,
   TitleHighLight,
   Column,
-} from "./styles";
+} from "./styles.ts";
 
 const Feed = () => {
   return (

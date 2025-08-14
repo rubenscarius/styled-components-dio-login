@@ -1,7 +1,7 @@
-import Home from "./pages/home";
-import Login from "./pages/login";
-import Feed from "./pages/feed";
-import SignUp from "./pages/signup";
+import Home from "./pages/home/index.js";
+import Login from "./pages/login/index.js";
+import Feed from "./pages/feed/index.js";
+import SignUp from "./pages/signup/index.js";
 import { BrowserRouter, Routes, Route } from "react-router";
 
 const App = () => {

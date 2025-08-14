@@ -1,7 +1,7 @@
-import Button from "../../components/Button";
-import Header from "../../components/Header";
+import Button from "../../components/Button/index.js";
+import Header from "../../components/Header/index.js";
 import bannerImage from "../../assets/banner.png";
-import { Container, TextContent, Title, TitleHighLight } from "./styles";
+import { Container, TextContent, Title, TitleHighLight } from "./styles.ts";
 import { useNavigate } from "react-router";
 
 const Home = () => {
@@ -13,7 +13,7 @@ const Home = () => {
 
   return (
     <>
-      <Header />
+      <Header autenticado={false} />
       <Container>
         <div>
           <Title>

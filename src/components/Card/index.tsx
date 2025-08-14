@@ -6,7 +6,7 @@ import {
   PostInfo,
   UserInfo,
   UserPicture,
-} from "./styles";
+} from "./styles.ts";
 import { ThumbUpOutlined } from "@mui/icons-material";
 
 const Card = () => {

@@ -1,5 +1,6 @@
-import Button from "../Button";
+import Button from "../Button/index.tsx";
 import logo from "../../assets/logo-full.webp";
+import type { IHeader } from "./types.ts";
 import {
   Container,
   BuscarInputContainer,
@@ -10,9 +11,9 @@ import {
   MenuRight,
   Input,
   UserPicture,
-} from "./styles";
+} from "./styles.ts";
 
-const Header = ({ autenticado }) => {
+const Header = ({ autenticado }: IHeader) => {
   return (
     <>
       <Wrapper>
@@ -34,7 +35,7 @@ const Header = ({ autenticado }) => {
               <UserPicture src="https://avatars.githubusercontent.com/u/135164952?v=4" />
             ) : (
               <>
-                <MenuRight href="#">Home</MenuRight>
+                <MenuRight href="/">Home</MenuRight>
                 <Button title="Entrar" />
                 <Button title="Cadastrar" />
               </>

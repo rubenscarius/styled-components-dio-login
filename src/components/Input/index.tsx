@@ -4,10 +4,11 @@ import {
   InputText,
   InputIconContainer,
   ErrorText,
-} from "./styles";
+} from "./styles.ts";
 import { Controller } from "react-hook-form";
+import type { IInput } from "./types.ts";
 
-const Input = ({ letfIcon, name, errorMessage, control, ...rest }) => {
+const Input = ({ letfIcon, name, errorMessage, control, ...rest }: IInput) => {
   return (
     <>
       <InputContainer>
