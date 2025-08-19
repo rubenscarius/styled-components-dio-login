@@ -41,6 +41,10 @@ const SignUp = () => {
     navigate("/login");
   };
 
+  const handleClickSignIn = () => {
+    navigate("/feed");
+  };
+
   const {
     control,
     handleSubmit,
@@ -54,14 +58,22 @@ const SignUp = () => {
 
   const onSubmit = async (formData: IFormData) => {
     try {
-      const { data } = await api.get(
-        `users?name=${formData.name}&email=${formData.email}&senha=${formData.password}`
+      const { data: usersFound } = await api.get(
+        `/users?email=${formData.email}`
       );
-      if (data.length === 1) {
-        //handleClickSignIn();
-      } else {
-        alert("Email e/ou senha inválidos");
+      if (usersFound.length > 0) {
+        alert("Este email já está em uso. Tente outro.");
+        return;
       }
+      const newUser = {
+        name: formData.name,
+        email: formData.email,
+        password: formData.password,
+      };
+
+      await api.post("/users", newUser);
+      alert("Usuário cadastrado com sucesso!");
+      handleClickSignIn();
     } catch {
       alert("Houve um erro, tente novamente");
     }

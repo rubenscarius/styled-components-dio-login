@@ -1,12 +1,40 @@
 {
   "users": [
-    { "id": 1, "name": "José", "email": "jose@email.com", "senha": "123456" },
-    { "id": 2, "name": "Maria", "email": "maria@email.com", "senha": "123456" },
     {
-      "id": 3,
+      "id": "1",
+      "name": "José",
+      "email": "jose@email.com",
+      "senha": "123456"
+    },
+    {
+      "id": "2",
+      "name": "Maria",
+      "email": "maria@email.com",
+      "senha": "123456"
+    },
+    {
+      "id": "3",
       "name": "Rubens",
       "email": "rubens@email.com",
       "senha": "qwerty"
+    },
+    {
+      "id": "4b0d",
+      "name": "Adão",
+      "email": "adao@email.com",
+      "senha": "primeiro"
+    },
+    {
+      "id": "e8cd",
+      "name": "eva",
+      "email": "eva@email.com",
+      "senha": "paraiso"
+    },
+    {
+      "id": "4cca",
+      "name": "eva",
+      "email": "eva2@email.com",
+      "password": "paraiso"
     }
   ]
 }
